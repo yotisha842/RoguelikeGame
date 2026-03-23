@@ -14,13 +14,14 @@ public class EnemyDTO {
     private boolean firstVampireStrike;
     private boolean ogrStrike;
     private int snakeDirection;
+    public char mimicSymbol;
 
     public EnemyDTO() {}
 
     public EnemyDTO(char symbol, CoordinateDTO position, boolean isAggressive,
                     int hp, int agility, int strength, int hostility,
                     boolean ghostInvisible, boolean firstVampireStrike,
-                    boolean ogrStrike, int snakeDirection) {
+                    boolean ogrStrike, int snakeDirection, char mimicSymbol) {
         this.symbol = symbol;
         this.position = position;
         this.isAggressive = isAggressive;
@@ -32,10 +33,10 @@ public class EnemyDTO {
         this.firstVampireStrike = firstVampireStrike;
         this.ogrStrike = ogrStrike;
         this.snakeDirection = snakeDirection;
+        this.mimicSymbol = mimicSymbol;
     }
 
     public char getSymbol() { return symbol; }
-    public void setSymbol(char symbol) { this.symbol = symbol; }
 
     public CoordinateDTO getPosition() { return position; }
     public void setPosition(CoordinateDTO position) { this.position = position; }
@@ -56,4 +57,5 @@ public class EnemyDTO {
     public boolean isFirstVampireStrike() { return firstVampireStrike; }
     public boolean isOgrStrike() { return ogrStrike; }
     public int getSnakeDirection() { return snakeDirection; }
+    public char getMimicSymbol() { return mimicSymbol; }
 }

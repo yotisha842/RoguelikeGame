@@ -17,7 +17,7 @@ public class EnemyMapper extends BaseMapper {
         if (enemy == null) return null;
 
         return new EnemyDTO(
-                enemy.getSymbol(),
+                enemy.GetSymbol(),
                 toCoordinateDTO(enemy.position),
                 enemy.isAggressive,
                 enemy.hp,
@@ -27,7 +27,8 @@ public class EnemyMapper extends BaseMapper {
                 enemy.ghostInvisible,
                 enemy.firstVampireStrike,
                 enemy.ogrStrike,
-                enemy.snakeDirection
+                enemy.snakeDirection,
+                enemy.mimicSymbol
         );
     }
 
@@ -70,6 +71,7 @@ public class EnemyMapper extends BaseMapper {
         enemy.firstVampireStrike = dto.isFirstVampireStrike();
         enemy.ogrStrike = dto.isOgrStrike();
         enemy.snakeDirection = dto.getSnakeDirection();
+        enemy.mimicSymbol = dto.getMimicSymbol();
 
         return enemy;
     }
